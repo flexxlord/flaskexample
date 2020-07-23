@@ -1,0 +1,45 @@
+<html>
+    <title>
+        Event Handler
+    </title>
+
+    <body onload="notify(this, 'onload')")>
+        <h2>
+            Date
+        </h2>
+
+        <button type="button" onclick=getDate()> Click me to display the date</button>
+        <button type="button" onclick=fontSize()> Increase font size </button>
+        <button type="button" onclick=hide()> Click me to hide </button>
+        <input type="text" id="mytext">
+        <p id="mydate" > </p>
+        <pre id="pretag"> pretag  </pre>
+    </body>
+    <script>
+        function getDate(){
+            let date = Date();
+            document.getElementById('mydate').innerHTML = date;
+            return
+        }
+
+        function notify(element, action)
+        {
+            document.getElementById('pretag').innerHTML += element;
+            document.getElementById('pretag').innerHTML += ": ";
+            document.getElementById('pretag').innerHTML += action;
+            document.getElementById('pretag').innerHTML += "\n";
+        }
+
+        function fontSize(){
+            document.getElementById('text').value;
+            document.getElementById('mydate').style.fontsize = document.getElementById('mytext').value;
+            return
+        }
+
+        function hide(){
+            document.getElementById('mydate').style.display = "none";
+            return
+        }
+         
+    </script>
+</html>
